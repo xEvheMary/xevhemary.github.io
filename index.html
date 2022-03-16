@@ -35,12 +35,12 @@
 		<div id="header-wrap">
 		<!-- Header -->
 				<header id="header">
-					<h1 id="logo"><a href="index.html">Welcome</a></h1>
+					<h1 id="logo"><a href="index.html">Alexander</a></h1>
 					<nav id="nav">
 						<ul>
 							<li><a href="index.html">Home</a></li>
 							<li>
-								<a href="#">Layouts</a>
+								<a href="#">Information</a>
 								<ul>
 									<li><a href="left-sidebar.html">Left Sidebar</a></li>
 									<li><a href="right-sidebar.html">Right Sidebar</a></li>
@@ -67,7 +67,7 @@
 			<!-- Banner -->
 				<section id="banner" class='section'>
 					<div id="particles-js"></div>
-					<div class="content">
+					<div class="content" style="padding:2em;">
 						<header>
 							<h2>I am Alex</h2>
 							<p>| Student | Engineering Enthusiast | Sci-fi Lover |<br />
@@ -81,9 +81,9 @@
 				</section>
 
 			<!-- One -->
-				<section id="one" class="section style1 bottom">
-					<span class="image fit main"><img src="images/pic02.jpg" alt="" /></span>
-					<div class="content">
+				<section id="one" class="section spotlight style1 bottom">
+					<!--<span class="image fit main"><img src="images/pic02.jpg" alt="" /></span>-->
+					<div class="content inactive">
 						<div class="container">
 							<div class="row">
 								<div class="col-4 col-12-medium">
@@ -112,10 +112,9 @@
 					<a href="#two" class="goto-next scrolly">Next</a>
 				</section>
 
-			<div class="section " id="section2">
 			<!-- Two -->
-				<section id="two" class="spotlight style2 right">
-					<span class="image fit main"><img src="images/pic03.jpg" alt="" /></span>
+				<section id="two" class="section spotlight style2 right inactive">
+					<!--<span class="image fit main"><img src="images/pic03.jpg" alt="" /></span>-->
 					<div class="content">
 						<header>
 							<h2>Interdum amet non magna accumsan</h2>
@@ -128,12 +127,10 @@
 					</div>
 					<a href="#three" class="goto-next scrolly">Next</a>
 				</section>
-			</div>
 			
-			<div class="section " id="section3">
 			<!-- Three -->
-				<section id="three" class="spotlight style3 left">
-					<span class="image fit main bottom"><img src="images/pic04.jpg" alt="" /></span>
+				<section id="three" class="section spotlight style3 left">
+					<!--<span class="image fit main bottom"><img src="images/pic04.jpg" alt="" /></span>-->
 					<div class="content">
 						<header>
 							<h2>Interdum felis blandit praesent sed augue</h2>
@@ -146,11 +143,9 @@
 					</div>
 					<a href="#four" class="goto-next scrolly">Next</a>
 				</section>
-			</div>
 
-			<div class="section " id="section4">
 			<!-- Four -->
-				<section id="four" class="wrapper style1 special fade-up">
+				<section id="four" class="section spotlight wrapper style1 special fade-up">
 					<div class="container">
 						<header class="major">
 							<h2>Accumsan sed tempus adipiscing blandit</h2>
@@ -197,11 +192,9 @@
 						</footer>
 					</div>
 				</section>
-			</div>
 			
-			<div class="section " id="section5">
 			<!-- Five -->
-				<section id="five" class="wrapper style2 special fade">
+				<section id="five" class="section spotlight wrapper style2 special fade">
 					<div class="container">
 						<header>
 							<h2>Magna faucibus lorem diam</h2>
@@ -215,7 +208,7 @@
 						</form>
 					</div>
 				</section>
-			</div>
+				
 			<!-- Footer -->
 				<footer id="footer">
 					<ul class="icons">
@@ -248,7 +241,7 @@
 			<script type="text/javascript">
 				var myFullpage = new fullpage('#page-wrapper', {
 					verticalCentered: false,
-					anchors: ['firstPage', 'secondPage', 'thirdPage', 'fourthPage', 'lastPage'],
+					anchors: ['banner', 'firstPage', 'secondPage', 'thirdPage', 'fourthPage', 'fifthPage', 'footer'],
 					//After load
 					afterLoad: function(origin, destination, direction){
 					var loadedSection = this;

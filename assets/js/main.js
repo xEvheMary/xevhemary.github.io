@@ -133,6 +133,7 @@
 				});
 
 		}
+		
 	/*
 	// Spotlights.
 		var $spotlights = $('.spotlight');
