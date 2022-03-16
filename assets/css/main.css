@@ -73,6 +73,11 @@ input, select, textarea {
 	appearance: none;
 }
 
+.inactive {
+	opacity: 0;
+	transition-delay: 0.5;
+}
+
 /* ---- Particle background ----*/
 /* ---- particles.js container ---- */
 
@@ -3207,6 +3212,7 @@ input, select, textarea {
 
 		.spotlight.inactive .content {
 			opacity: 0;
+			transition-delay: 0.5;
 		}
 
 		.spotlight.inactive .goto-next {

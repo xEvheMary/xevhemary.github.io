@@ -21,13 +21,13 @@
 			display:block;
 			width: 100%;
 			background: rgba(51, 51, 51, 0);
-			back
-			z-index:9;
+			z-index:50;
 			text-align:center;
 			color: #f2f2f2;
 			padding: 20px 0 0 0;
 			top:0px;
 			z-index:100;
+			size: 45px;
 		}
 		</style>
 	</head>
@@ -35,31 +35,17 @@
 		<div id="header-wrap">
 		<!-- Header -->
 				<header id="header">
-					<h1 id="logo"><a href="index.html">Alexander</a></h1>
+					<h1 id="logo"><a href="#banner">Alexander</a></h1>
+					
 					<nav id="nav">
 						<ul>
-							<li><a href="index.html">Home</a></li>
-							<li>
-								<a href="#">Information</a>
-								<ul>
-									<li><a href="left-sidebar.html">Left Sidebar</a></li>
-									<li><a href="right-sidebar.html">Right Sidebar</a></li>
-									<li><a href="no-sidebar.html">No Sidebar</a></li>
-									<li>
-										<a href="#">Submenu</a>
-										<ul>
-											<li><a href="#">Option 1</a></li>
-											<li><a href="#">Option 2</a></li>
-											<li><a href="#">Option 3</a></li>
-											<li><a href="#">Option 4</a></li>
-										</ul>
-									</li>
-								</ul>
-							</li>
-							<li><a href="elements.html">Elements</a></li>
-							<!--<li><a href="#" class="button primary">Sign Up</a></li>-->
+							<li><a href="#firstPage" id="go-title">Title</a></li>
+							<li><a href="#secondPage">Information</a></li>
+							<!--<li><a href="elements.html">Elements</a></li>-->
+							<!--<li><a href="#" class="button primary">Sign Up</a></li> -->
 						</ul>
 					</nav>
+				
 				</header>
 		</div>
 		<div id="page-wrapper">
@@ -69,7 +55,7 @@
 					<div id="particles-js"></div>
 					<div class="content" style="padding:2em;">
 						<header>
-							<h2>I am Alex</h2>
+							<h2>I Am Alex</h2>
 							<p>| Student | Engineering Enthusiast | Sci-fi Lover |<br />
 							I'm currently studying at National Yang Ming Chiao Tung University<br />
 							Also currently part of the CECNL Lab, studying about BCI and Brain Signal Classification
@@ -77,7 +63,7 @@
 						</header>
 						<span class="image"><img src="images/pic01.jpg" alt="" /></span>
 					</div>
-					<a href="#one" class="goto-next scrolly">Next</a>
+					<a href="#" class="goto-next">Next</a>
 				</section>
 
 			<!-- One -->
@@ -109,11 +95,11 @@
 							</div>
 						</div>
 					</div>
-					<a href="#two" class="goto-next scrolly">Next</a>
+					<a href="#" class="goto-next">Next</a>
 				</section>
 
 			<!-- Two -->
-				<section id="two" class="section spotlight style2 right inactive">
+				<section id="two" class="section spotlight style2 right">
 					<!--<span class="image fit main"><img src="images/pic03.jpg" alt="" /></span>-->
 					<div class="content">
 						<header>
@@ -125,7 +111,7 @@
 							<li><a href="#" class="button">Learn More</a></li>
 						</ul>
 					</div>
-					<a href="#three" class="goto-next scrolly">Next</a>
+					<a href="#" class="goto-next">Next</a>
 				</section>
 			
 			<!-- Three -->
@@ -141,7 +127,7 @@
 							<li><a href="#" class="button">Learn More</a></li>
 						</ul>
 					</div>
-					<a href="#four" class="goto-next scrolly">Next</a>
+					<a href="#" class="goto-next">Next</a>
 				</section>
 
 			<!-- Four -->
@@ -194,7 +180,7 @@
 				</section>
 			
 			<!-- Five -->
-				<section id="five" class="section spotlight wrapper style2 special fade">
+				<section id="five" class="section spotlight wrapper style2 special fade inactive">
 					<div class="container">
 						<header>
 							<h2>Magna faucibus lorem diam</h2>
@@ -239,23 +225,28 @@
 			<script src="assets/js/app.js"></script>	
 			<script src="assets/js/fullpage.js"></script>	
 			<script type="text/javascript">
-				var myFullpage = new fullpage('#page-wrapper', {
-					verticalCentered: false,
-					anchors: ['banner', 'firstPage', 'secondPage', 'thirdPage', 'fourthPage', 'fifthPage', 'footer'],
-					//After load
-					afterLoad: function(origin, destination, direction){
-					var loadedSection = this;
-
-					//using index
-					if(origin.index == 2){
-						alert("Section 3 ended loading");
-					}
-
-					//using anchorLink
-					if(origin.anchor == 'secondSlide'){
-						alert("Section 2 ended loading");
-					}
+				function initialization(){
+					var myFullpage = new fullpage('#page-wrapper', {
+						verticalCentered: false,
+						anchors: ['banner', 'firstPage', 'secondPage', 'thirdPage', 'fourthPage', 'fifthPage', 'footer'],
+						/*
+						navigation:true,
+						navigationTooltips: ['Me!', 'firstPage', 'secondPage', 'thirdPage', 'fourthPage', 'fifthPage', 'footer'],
+						showActiveTooltip: true,
+						*/
+					});
 				}
+				
+				initialization();
+				
+				$(document).on('click', '#go-title', function(){
+				   $.fn.fullpage.moveTo(1);
+				   alert("clicked");
+				});
+				
+				$(document).on('click', '.goto-next', function(){
+				  fullpage_api.moveSectionDown();
+				  alert("clicked");
 				});
 			</script>
 	</body>
