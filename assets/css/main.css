@@ -73,11 +73,6 @@ input, select, textarea {
 	appearance: none;
 }
 
-.inactive {
-	opacity: 0;
-	transition-delay: 0.5;
-}
-
 /* ---- Particle background ----*/
 /* ---- particles.js container ---- */
 
@@ -132,6 +127,22 @@ input, select, textarea {
   border-radius: 0 0 3px 3px;
 }
 
+.nav .active a {
+	color: #e44c65;
+}
+/*
+.sub-content {
+	transition: transform 1s ease, opacity 1s ease;
+	opacity: 1;
+	position: absolute;
+	height: 101%;
+	padding: 8em 4em;
+	top: 0;
+	width: 55em;
+	border-left-width: 0.35em;
+	right: 5em;
+}
+*/
 /* Basic */
 
 	html {
@@ -3148,6 +3159,25 @@ input, select, textarea {
 			opacity: 1;
 			position: absolute;
 		}
+		
+		.spotlight .sub-content {
+			-moz-transform: translate(0,0);
+			-webkit-transform: translate(0,0);
+			-ms-transform: translate(0,0);
+			transform: translate(0,0);
+			-moz-transition: -moz-transform 1s ease, opacity 1s ease;
+			-webkit-transition: -webkit-transform 1s ease, opacity 1s ease;
+			-ms-transition: -ms-transform 1s ease, opacity 1s ease;
+			transition: transform 1s ease, opacity 1s ease;
+			opacity: 1;
+			position: absolute;
+			border-left-width: 0.35em;
+			right: 0;
+			height: 101%;
+			padding: 8em 4em;
+			top: 0;
+			width: 72em;
+		}
 
 		.spotlight .goto-next {
 			-moz-transform: translate(0,0);
@@ -3167,7 +3197,7 @@ input, select, textarea {
 
 		.spotlight.top .content, .spotlight.bottom .content {
 			left: 0;
-			padding: 5.1em 0 3.1em 0;
+			padding: 3.6em 0 1.6em 0;
 			width: 100%;
 		}
 
@@ -3682,6 +3712,10 @@ input, select, textarea {
 			.spotlight.left .content, .spotlight.right .content {
 				padding: 4.5em 2.5em;
 				width: 25em;
+			}
+			
+			.spotlight .sub-content {
+				width: 60vw;
 			}
 
 		/* Wrapper */

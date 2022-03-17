@@ -39,8 +39,10 @@
 					
 					<nav id="nav">
 						<ul>
-							<li><a href="#firstPage" id="go-title">Title</a></li>
-							<li><a href="#secondPage">Information</a></li>
+							<li data-menuanchor="firstPage" class=""><a href="#firstPage">Project</a></li>
+							<li data-menuanchor="secondPage" class=""><a href="#secondPage">Publication</a></li>
+							<li data-menuanchor="thirdPage" class=""><a href="#thirdPage">Resume</a></li>
+							<li data-menuanchor="fourthPage" class=""><a href="#fourthPage">About Me</a></li>
 							<!--<li><a href="elements.html">Elements</a></li>-->
 							<!--<li><a href="#" class="button primary">Sign Up</a></li> -->
 						</ul>
@@ -65,16 +67,53 @@
 					</div>
 					<a href="#" class="goto-next">Next</a>
 				</section>
-
+			
 			<!-- One -->
-				<section id="one" class="section spotlight style1 bottom">
+				<section id="one" class="section wrapper style1 special fade-up">
+					<div class="container">
+						<header class="major">
+							<h2>Projects & Works</h2>
+							<p>Here are the projects and things i have done as an engineer</p>
+						</header>
+						<div class="box alt">
+							<div class="row gtr-uniform">
+								<section class="col-4 col-6-medium col-12-xsmall">
+									<span class="icon solid alt major fa-chart-area"></span>
+									<h3>Electrical Engineering</h3>
+									<p>Feugiat accumsan lorem eu ac lorem amet accumsan donec. Blandit orci porttitor.</p>
+								</section>
+								<section class="col-4 col-6-medium col-12-xsmall">
+									<span class="icon solid alt major fa-comment"></span>
+									<h3>Web-based Projects</h3>
+									<p>Feugiat accumsan lorem eu ac lorem amet accumsan donec. Blandit orci porttitor.</p>
+								</section>
+								<section class="col-4 col-6-medium col-12-xsmall">
+									<span class="icon solid alt major fa-flask"></span>
+									<h3>Deep Learning & BCI</h3>
+									<p>Feugiat accumsan lorem eu ac lorem amet accumsan donec. Blandit orci porttitor.</p>
+								</section>
+							</div>
+						</div>
+						<!--
+						<footer class="major">
+							<ul class="actions special">
+								<li><a href="#" class="button">Magna sed feugiat</a></li>
+							</ul>
+						</footer>
+						-->
+					</div>
+					<a href="#" class="goto-next">Next</a>
+				</section>
+
+			<!-- Two -->
+				<section id="two" class="section spotlight style1 bottom">
 					<!--<span class="image fit main"><img src="images/pic02.jpg" alt="" /></span>-->
-					<div class="content inactive">
+					<div class="content">
 						<div class="container">
 							<div class="row">
 								<div class="col-4 col-12-medium">
 									<header>
-										<h2>Odio faucibus ipsum integer consequat</h2>
+										<h2>Publications</h2>
 										<p>Nascetur eu nibh vestibulum amet gravida nascetur praesent</p>
 									</header>
 								</div>
@@ -97,30 +136,37 @@
 					</div>
 					<a href="#" class="goto-next">Next</a>
 				</section>
-
-			<!-- Two -->
-				<section id="two" class="section spotlight style2 right">
-					<!--<span class="image fit main"><img src="images/pic03.jpg" alt="" /></span>-->
-					<div class="content">
-						<header>
-							<h2>Interdum amet non magna accumsan</h2>
-							<p>Nunc commodo accumsan eget id nisi eu col volutpat magna</p>
-						</header>
-						<p>Feugiat accumsan lorem eu ac lorem amet ac arcu phasellus tortor enim mi mi nisi praesent adipiscing. Integer mi sed nascetur cep aliquet augue varius tempus lobortis porttitor lorem et accumsan consequat adipiscing lorem.</p>
-						<ul class="actions">
-							<li><a href="#" class="button">Learn More</a></li>
-						</ul>
-					</div>
-					<a href="#" class="goto-next">Next</a>
-				</section>
 			
 			<!-- Three -->
 				<section id="three" class="section spotlight style3 left">
 					<!--<span class="image fit main bottom"><img src="images/pic04.jpg" alt="" /></span>-->
 					<div class="content">
 						<header>
-							<h2>Interdum felis blandit praesent sed augue</h2>
-							<p>Accumsan integer ultricies aliquam vel massa sapien phasellus</p>
+							<h2>Resume</h2>
+							<h2>Alexander Edward Hutomo</h2>
+							<h4>| Deep Learning Engineer | Computer Scientist | Electrical Engineer |</h4>
+						</header>
+						<p>alexander.hutomo@yahoo.com <br/>Hsinchu, Taiwan</p>
+						<ul class="actions">
+							<li><a href="#" class="button">CV Lite Version</a></li>
+						</ul>
+					</div>
+					<div class="sub-content">
+						<div class="slide active"><h1>Simple Demo</h1></div>
+						<div class="slide"><h1>Only text</h1></div>
+						<div class="slide"><h1>And text</h1></div>
+						<div class="slide"><h1>And more text</h1></div>
+					</div>
+					<a href="#" class="goto-next">Next</a>
+				</section>
+
+			<!-- Four -->
+				<section id="four" class="section spotlight style2 right">
+					<!--<span class="image fit main"><img src="images/pic03.jpg" alt="" /></span>-->
+					<div class="content">
+						<header>
+							<h2 style="margin:0 0 .1em 0;">Alexander Edward Hutomo</h2>
+							<h3 style="margin:0 0 .1em 0;">符氣誠</h3>
 						</header>
 						<p>Feugiat accumsan lorem eu ac lorem amet ac arcu phasellus tortor enim mi mi nisi praesent adipiscing. Integer mi sed nascetur cep aliquet augue varius tempus lobortis porttitor lorem et accumsan consequat adipiscing lorem.</p>
 						<ul class="actions">
@@ -129,84 +175,19 @@
 					</div>
 					<a href="#" class="goto-next">Next</a>
 				</section>
-
-			<!-- Four -->
-				<section id="four" class="section spotlight wrapper style1 special fade-up">
-					<div class="container">
-						<header class="major">
-							<h2>Accumsan sed tempus adipiscing blandit</h2>
-							<p>Iaculis ac volutpat vis non enim gravida nisi faucibus posuere arcu consequat</p>
-						</header>
-						<div class="box alt">
-							<div class="row gtr-uniform">
-								<section class="col-4 col-6-medium col-12-xsmall">
-									<span class="icon solid alt major fa-chart-area"></span>
-									<h3>Ipsum sed commodo</h3>
-									<p>Feugiat accumsan lorem eu ac lorem amet accumsan donec. Blandit orci porttitor.</p>
-								</section>
-								<section class="col-4 col-6-medium col-12-xsmall">
-									<span class="icon solid alt major fa-comment"></span>
-									<h3>Eleifend lorem ornare</h3>
-									<p>Feugiat accumsan lorem eu ac lorem amet accumsan donec. Blandit orci porttitor.</p>
-								</section>
-								<section class="col-4 col-6-medium col-12-xsmall">
-									<span class="icon solid alt major fa-flask"></span>
-									<h3>Cubilia cep lobortis</h3>
-									<p>Feugiat accumsan lorem eu ac lorem amet accumsan donec. Blandit orci porttitor.</p>
-								</section>
-								<section class="col-4 col-6-medium col-12-xsmall">
-									<span class="icon solid alt major fa-paper-plane"></span>
-									<h3>Non semper interdum</h3>
-									<p>Feugiat accumsan lorem eu ac lorem amet accumsan donec. Blandit orci porttitor.</p>
-								</section>
-								<section class="col-4 col-6-medium col-12-xsmall">
-									<span class="icon solid alt major fa-file"></span>
-									<h3>Odio laoreet accumsan</h3>
-									<p>Feugiat accumsan lorem eu ac lorem amet accumsan donec. Blandit orci porttitor.</p>
-								</section>
-								<section class="col-4 col-6-medium col-12-xsmall">
-									<span class="icon solid alt major fa-lock"></span>
-									<h3>Massa arcu accumsan</h3>
-									<p>Feugiat accumsan lorem eu ac lorem amet accumsan donec. Blandit orci porttitor.</p>
-								</section>
-							</div>
-						</div>
-						<footer class="major">
-							<ul class="actions special">
-								<li><a href="#" class="button">Magna sed feugiat</a></li>
-							</ul>
-						</footer>
-					</div>
-				</section>
-			
-			<!-- Five -->
-				<section id="five" class="section spotlight wrapper style2 special fade inactive">
-					<div class="container">
-						<header>
-							<h2>Magna faucibus lorem diam</h2>
-							<p>Ante metus praesent faucibus ante integer id accumsan eleifend</p>
-						</header>
-						<form method="post" action="#" class="cta">
-							<div class="row gtr-uniform gtr-50">
-								<div class="col-8 col-12-xsmall"><input type="email" name="email" id="email" placeholder="Your Email Address" /></div>
-								<div class="col-4 col-12-xsmall"><input type="submit" value="Get Started" class="fit primary" /></div>
-							</div>
-						</form>
-					</div>
-				</section>
 				
 			<!-- Footer -->
-				<footer id="footer">
+				<footer id="footer" class="section fp-auto-height">
 					<ul class="icons">
-						<li><a href="#" class="icon brands alt fa-twitter"><span class="label">Twitter</span></a></li>
-						<li><a href="#" class="icon brands alt fa-facebook-f"><span class="label">Facebook</span></a></li>
-						<li><a href="#" class="icon brands alt fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
+						<li><a href="https://twitter.com/Alex_Edward7" class="icon brands alt fa-twitter"><span class="label">Twitter</span></a></li>
+						<li><a href="https://www.facebook.com/alexander.e.hutomo" class="icon brands alt fa-facebook-f"><span class="label">Facebook</span></a></li>
+						<li><a href="https://www.linkedin.com/in/alexander-edward-hutomo-b478b8212/" class="icon brands alt fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
 						<li><a href="#" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li>
-						<li><a href="#" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
-						<li><a href="#" class="icon solid alt fa-envelope"><span class="label">Email</span></a></li>
+						<li><a href="https://github.com/xEvheMary" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+						<li><a href="mailto:alexander.hutomo@yahoo.com" class="icon solid alt fa-envelope"><span class="label">Email</span></a></li>
 					</ul>
 					<ul class="copyright">
-						<li>&copy; Untitled. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+						<li>&copy; 2022 Alexander E</li><li>Design: <a href="http://html5up.net">HTML5UP Landed</a> + <a href="https://alvarotrigo.com/fullPage/#">FullPage.js</a></li>
 					</ul>
 				</footer>
 
@@ -229,6 +210,7 @@
 					var myFullpage = new fullpage('#page-wrapper', {
 						verticalCentered: false,
 						anchors: ['banner', 'firstPage', 'secondPage', 'thirdPage', 'fourthPage', 'fifthPage', 'footer'],
+						menu: '#nav ul'
 						/*
 						navigation:true,
 						navigationTooltips: ['Me!', 'firstPage', 'secondPage', 'thirdPage', 'fourthPage', 'fifthPage', 'footer'],
@@ -241,12 +223,12 @@
 				
 				$(document).on('click', '#go-title', function(){
 				   $.fn.fullpage.moveTo(1);
-				   alert("clicked");
+				   
 				});
 				
 				$(document).on('click', '.goto-next', function(){
 				  fullpage_api.moveSectionDown();
-				  alert("clicked");
+				  
 				});
 			</script>
 	</body>

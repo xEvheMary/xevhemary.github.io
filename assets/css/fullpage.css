@@ -235,3 +235,70 @@ html.fp-enabled,
     white-space: nowrap;
     border: 0;
 }
+
+/* ========== BANNER - content animation ========== */
+#banner > .content h2,
+#banner > .content p,
+#banner > .content span {
+	opacity: 0;
+	transition: opacity 1s ease-in-out;
+}
+
+#banner.active > .content h2,
+#banner.active > .content p,
+#banner.active > .content span {
+	opacity: 1;
+}
+
+#banner.active > .content h2 {
+	transition-delay: .33s;
+}
+
+#banner.active > .content p {
+	transition-delay: .66s;
+}
+
+#banner.active > .content span {
+	transition-delay: 0.98s;
+}
+
+/* ========== First - content animation ========== */
+#two > div {
+	transform: translateX(0) translateY(0);
+	transform: translateY(250px);
+	opacity: 0;
+	transition: transform .8s cubic-bezier(0.16, 0.68, 0.43, 0.99),
+				opacity .8s ease-in-out;
+}
+
+#two.active > div {
+	transform: translateX(0) translateY(0);
+	opacity: 1;
+	transition-delay: .34s;
+}
+
+/* ========== Second - content animation ========== */
+#four > div {
+	transform: translateX(100%);
+	opacity: 0;
+	transition: transform .8s cubic-bezier(0.16, 0.68, 0.43, 0.99),
+				opacity .8s ease-in-out;
+}
+#four.active > div {
+	transform: translateX(0);
+	opacity: 1;
+	transition-delay: .34s;
+}
+
+/* ========== Third - content animation ========== */
+#three > div {
+	transform: translateX(-100%);
+	opacity: 0;
+	transition: transform .8s cubic-bezier(0.16, 0.68, 0.43, 0.99),
+				opacity .8s ease-in-out;
+}
+#three.active > div {
+	transform: translateX(0);
+	opacity: 1;
+	transition-delay: .34s;
+}
