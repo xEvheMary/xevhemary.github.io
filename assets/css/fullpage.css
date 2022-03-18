@@ -291,14 +291,59 @@ html.fp-enabled,
 }
 
 /* ========== Third - content animation ========== */
-#three > div {
+#three > div.content {
 	transform: translateX(-100%);
 	opacity: 0;
 	transition: transform .8s cubic-bezier(0.16, 0.68, 0.43, 0.99),
 				opacity .8s ease-in-out;
 }
-#three.active > div {
+#three.active > div.content {
 	transform: translateX(0);
 	opacity: 1;
 	transition-delay: .34s;
+}
+
+@media screen and (max-width: 980px){
+	/* ========== First - content animation ========== */
+	#two > div {
+		transform: translateX(0) translateY(0);
+		transform: translateY(0);
+		opacity: 0;
+		transition: transform .8s cubic-bezier(0.16, 0.68, 0.43, 0.99),
+					opacity .8s ease-in-out;
+	}
+
+	#two.active > div {
+		transform: translateX(0) translateY(-100%);
+		opacity: 1;
+		transition-delay: .34s;
+	}
+
+	/* ========== Second - content animation ========== */
+	#four > div {
+		transform: translateX(0) translateY(0);
+		transform: translateY(0);
+		opacity: 0;
+		transition: transform .8s cubic-bezier(0.16, 0.68, 0.43, 0.99),
+					opacity .8s ease-in-out;
+	}
+	#four.active > div {
+		transform: translateX(0) translateY(-100%);
+		opacity: 1;
+		transition-delay: .34s;
+	}
+
+	/* ========== Third - content animation ========== */
+	#three > div.content {
+		transform: translateX(0) translateY(0);
+		transform: translateY(0);
+		opacity: 0;
+		transition: transform .8s cubic-bezier(0.16, 0.68, 0.43, 0.99),
+					opacity .8s ease-in-out;
+	}
+	#three.active > div.content {
+		transform: translateX(0) translateY(-100%);
+		opacity: 1;
+		transition-delay: .34s;
+	}
 }

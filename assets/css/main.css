@@ -130,19 +130,13 @@ input, select, textarea {
 .nav .active a {
 	color: #e44c65;
 }
-/*
-.sub-content {
-	transition: transform 1s ease, opacity 1s ease;
-	opacity: 1;
-	position: absolute;
-	height: 101%;
-	padding: 8em 4em;
-	top: 0;
-	width: 55em;
-	border-left-width: 0.35em;
-	right: 5em;
+
+.slide {
+	text-align: center;
+	padding: 25vh 0;
+	font-size: 2em;
 }
-*/
+
 /* Basic */
 
 	html {
@@ -181,7 +175,7 @@ input, select, textarea {
 		-webkit-transition: border-color 0.2s ease-in-out, color 0.2s ease-in-out;
 		-ms-transition: border-color 0.2s ease-in-out, color 0.2s ease-in-out;
 		transition: border-color 0.2s ease-in-out, color 0.2s ease-in-out;
-		border-bottom: dotted 1px;
+		border-bottom: None;
 		color: #e44c65;
 		text-decoration: none;
 	}
@@ -3171,12 +3165,6 @@ input, select, textarea {
 			transition: transform 1s ease, opacity 1s ease;
 			opacity: 1;
 			position: absolute;
-			border-left-width: 0.35em;
-			right: 0;
-			height: 101%;
-			padding: 8em 4em;
-			top: 0;
-			width: 72em;
 		}
 
 		.spotlight .goto-next {
@@ -3226,6 +3214,14 @@ input, select, textarea {
 		.spotlight.right .content {
 			border-left-width: 0.35em;
 			right: 0;
+		}
+		
+		.spotlight.left .sub-content {
+			height: 80vh;
+			padding: 4.5em 3.2em;
+			top: 10vh;
+			left: 33em;
+			width: calc(100% - 38em);
 		}
 
 		.spotlight.style1 .content {
@@ -3714,8 +3710,12 @@ input, select, textarea {
 				width: 25em;
 			}
 			
-			.spotlight .sub-content {
-				width: 60vw;
+			.spotlight.left .sub-content {
+				top: 10vh;
+				padding: 4em 3.2em;
+				left: 30em;
+				height: 80vh;
+				width: calc(100% - 34em) ;
 			}
 
 		/* Wrapper */
@@ -3780,6 +3780,19 @@ input, select, textarea {
 					text-align: center;
 					top: auto !important;
 					width: 100% !important;
+				}
+				
+				.spotlight.left .content ,
+				.spotlight.right .content {
+					height: auto !important;
+	
+				}
+				
+				.spotlight .sub-content {
+					left: 5vw !important;
+					width: 90% !important;
+					top: 7.5vh !important;
+					opacity: 0 !important;
 				}
 
 					.spotlight .content ul.actions {
