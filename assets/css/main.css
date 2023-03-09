@@ -3962,6 +3962,7 @@ input, select, textarea {
 
 			header.major {
 				margin: 0 0 2em 0;
+				padding: 1.5em 0 0 0;
 			}
 
 		/* Goto Next */
@@ -4211,6 +4212,38 @@ input, select, textarea {
 				padding: 3.25em 1.5em;
 			}
 
+		/* Project & Work page */
+
+		.box.alt{
+			overflow-y: scroll;
+			max-height: 65vh;
+		}
+
+		.box.alt {
+			-ms-overflow-style: none;  /* IE and Edge */
+			scrollbar-width: none;  /* Firefox */
+		  }
+
+		/* width */
+		.box.alt::-webkit-scrollbar {
+			width: 0.3em;
+		}
+		
+		/* Track */
+		.box.alt::-webkit-scrollbar-track {
+			background: #272833; 
+		}
+		
+		/* Handle */
+		.box.alt::-webkit-scrollbar-thumb {
+			background: #e44c65; 
+		}
+		
+		/* Handle on hover */
+		.box.alt::-webkit-scrollbar-thumb:hover {
+			background: #151515; 
+		}
+
 	}
 
 /* XSmall */
@@ -4274,5 +4307,10 @@ input, select, textarea {
 						margin: 0;
 						padding: 0;
 					}
+
+		/* Project */
+		.box.alt{
+			max-height: 50vh;
+		}
 
 	}
