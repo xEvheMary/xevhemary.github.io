@@ -1,0 +1,29 @@
+/* Tablet view (width ≤ 1024px) */
+@media (max-width: 1024px) {
+    .one-content {
+        grid-template-columns: 65% 35%; /* Adjust column ratio */
+        max-width: 100%; /* Reduce width for better fit */
+    }
+}
+
+/* Mobile view (width ≤ 720px) */
+@media (max-width: 720px) {
+    .one-content {
+        display: flex; /* Stack header and image */
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding-right: 0em;
+        width: 100%;
+        row-gap: 0px;
+    }
+        .one-content header {
+            text-align: center;
+        }
+
+        .one-content .profile-image{
+            width: 15em; /* Smaller image for mobile */
+            justify-self: center;
+        }
+}
