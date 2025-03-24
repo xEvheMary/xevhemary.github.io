@@ -4,7 +4,11 @@ const slides = document.querySelectorAll(".slide");
 const cvslides = document.querySelectorAll(".cv-slide");
 const pageNavItems = document.querySelectorAll("header #logo ,#nav li"); // Main section nav
 const slideNavItems = document.querySelectorAll(".left-part a"); // Slide nav
+// Variables
 let autoSlideInterval;
+let isDragging = false;
+let startX, currentX, translateX = 0;
+let currentIndex = 0;
 
 function updateActiveSection() {
     let firstVisibleSection = [...sections].find(section => {
@@ -49,6 +53,55 @@ function startAutoSlide(section, start=0) {
 
 function stopAutoSlide() {
     clearInterval(autoSlideInterval);
+}
+
+function startDrag(e) {
+    isDragging = true;
+    startX = e.type.includes("touch") ? e.touches[0].clientX : e.clientX; // Get initial position
+    slidesContainer.style.transition = "none";  // Disable smooth transition while dragging
+
+    document.addEventListener("mousemove", onDrag);
+    document.addEventListener("mouseup", endDrag);
+    document.addEventListener("touchmove", onDrag, { passive: true });
+    document.addEventListener("touchend", endDrag);
+}
+
+// Dragging event
+function onDrag(e) {
+    if (!isDragging) return;
+
+    currentX = e.type.includes("touch") ? e.touches[0].clientX : e.clientX;
+    let movedX = currentX - startX;
+
+    slidesContainer.style.transform = `translateX(${translateX + movedX}px)`;
+}
+
+// End drag and snap to closest slide
+function endDrag(e) {
+    if (!isDragging) return;
+    isDragging = false;
+
+    let movedX = currentX - startX;
+    let slideWidth = slides[0].offsetWidth;
+
+    if (Math.abs(movedX) > slideWidth / 4) {
+        // If swipe distance is significant, move to next or previous slide
+        currentIndex = movedX > 0 ? currentIndex - 1 : currentIndex + 1;
+    }
+
+    // Prevent out-of-bounds sliding
+    currentIndex = Math.max(0, Math.min(slides.length - 1, currentIndex));
+
+    // Snap to the nearest slide
+    translateX = -currentIndex * slideWidth;
+    slidesContainer.style.removeProperty("transition");
+    slidesContainer.style.transform = `translateX(${translateX}px)`;
+    
+    startAutoSlide(sections[1], currentIndex); // restart auto-slide
+    document.removeEventListener("mousemove", onDrag);
+    document.removeEventListener("mouseup", endDrag);
+    document.removeEventListener("touchmove", onDrag);
+    document.removeEventListener("touchend", endDrag);
 }
 
 const sectionObserver = new IntersectionObserver(
@@ -154,3 +207,6 @@ function getActiveIndex(slideClass, activeClass) {
 
 // Listen for manual scrolling (if allowed)
 slidesContainer.addEventListener("transitionend", updateActiveSlide);
+// Listen for dragging events
+slidesContainer.addEventListener("mousedown", startDrag);
+slidesContainer.addEventListener("touchstart", startDrag, { passive: true });
