@@ -105,9 +105,6 @@ h1, h2, h3, h4, h5, h6 {
     background-color: var(--grey);
     scrollbar-width: none;
 }
-.scroll-element::-webkit-scrollbar{
-    display: none;
-}
 /* .content-wrapper{
     overflow-y: scroll;
 } */
@@ -392,6 +389,11 @@ h1, h2, h3, h4, h5, h6 {
                     justify-content: center;
                     align-items: center;
                     padding: 0px 2em;
+                    & h2{
+                        font-size: 2em;
+                        font-weight: bold;
+                        margin: 0 0 2em 0;
+                    }
                 }
             }
         }
@@ -522,6 +524,7 @@ h1, h2, h3, h4, h5, h6 {
     }
     .right-part{
         display: flex;
+        height: auto;
         background-color: var(--grey);
         overflow: hidden;
         align-items: center;
@@ -545,7 +548,7 @@ h1, h2, h3, h4, h5, h6 {
         }
     }
 }
-.scroll-element::-webkit-scrollbar {
+.scroll-element::-webkit-scrollbar{
     width: 8px;  /* Remove scrollbar space */
     background: transparent;  /* Optional: just make scrollbar invisible */
 }
