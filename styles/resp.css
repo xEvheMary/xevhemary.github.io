@@ -12,6 +12,9 @@
         overflow-y: scroll;
         overflow-x: hidden;
     }
+    .mouse-glow {
+        display: none;
+    }
     .one-content {
         display: flex; /* Stack header and image */
         flex-direction: column;

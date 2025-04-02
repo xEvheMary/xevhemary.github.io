@@ -10,6 +10,15 @@ let isDragging = false;
 let startX, currentX, translateX = 0;
 let currentIndex = 0;
 
+document.addEventListener("mousemove", (e) => {
+    const glow = document.querySelector(".mouse-glow");
+    
+    // Adjust position relative to viewport
+    const x = e.clientX - glow.offsetWidth / 2;
+    const y = e.clientY - glow.offsetHeight / 2;
+
+    glow.style.transform = `translate(${x}px, ${y}px)`;
+});
 function updateActiveSection() {
     let firstVisibleSection = [...sections].find(section => {
         let rect = section.getBoundingClientRect();
