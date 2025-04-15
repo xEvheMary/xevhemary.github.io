@@ -345,7 +345,7 @@ html:focus-within{
     & .card-link .card-date {
         font-size: medium;
         color: var(--darkgrey);
-        margin: 0.5em 0.5em;
+        margin: 0.6em 0.5em;
         text-align: left;
     }
     & .card-link .card-title{
@@ -353,9 +353,36 @@ html:focus-within{
         font-weight: 600;
         color: var(--darkgrey);
         text-align: left;
+        height: 4.2em;
+        overflow-y: auto;
+        &::-webkit-scrollbar {
+            width: 4px;
+        }
+        &::-webkit-scrollbar-thumb {
+            background-color: rgba(100, 100, 100, 0.3);
+            border-radius: 10px;
+          }
+        &::-webkit-scrollbar-track {
+            background: transparent;
+        }
     }
+    
 }
-
+/* -------------- Five -------------- */
+#five{
+    background-color: var(--lightgrey);
+    box-shadow: inset 0px 8px 8px -8px rgba(0, 0, 0, 0.8);
+    padding: 2em 8em;
+}
+.five-content{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
 .five-list{
     list-style: none;
+    & li{
+        display: inline-block;
+    }
 }
