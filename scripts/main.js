@@ -4,6 +4,7 @@ const slides = document.querySelectorAll(".slide");
 const cvslides = document.querySelectorAll(".cv-slide");
 const pageNavItems = document.querySelectorAll("header #logo ,#nav li"); // Main section nav
 const slideNavItems = document.querySelectorAll(".left-part a"); // Slide nav
+const glow = document.querySelector(".mouse-glow");
 // Variables
 let autoSlideInterval;
 let isDragging = false;
@@ -11,7 +12,6 @@ let startX, currentX, translateX = 0;
 let currentIndex = 0;
 
 document.addEventListener("mousemove", (e) => {
-    const glow = document.querySelector(".mouse-glow");
     
     // Adjust position relative to viewport
     const x = e.clientX - glow.offsetWidth / 2;
@@ -165,7 +165,7 @@ document.addEventListener("DOMContentLoaded", () => {
     sections.forEach((section) => sectionObserver.observe(section));
     slides.forEach((slide) => slideObserver.observe(slide));
     cvslides.forEach((cvslide) => cvObserver.observe(cvslide));
-
+    glow.style.display = "block";
     // Initialize active state on load
     updateActiveSection();
     updateActiveSlide();
